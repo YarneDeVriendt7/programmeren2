@@ -13,8 +13,7 @@ namespace WebShoppie.Api.Contracts.Products
         public string Description { get; set; }
         [Required]
         public double Price { get; set; }
-        [Required]
-        public int? AgeRating { get; set; }
+        public int? AgeRating { get; set; } = null;
         [Required]
         public int StockCount { get; set; }
     }
