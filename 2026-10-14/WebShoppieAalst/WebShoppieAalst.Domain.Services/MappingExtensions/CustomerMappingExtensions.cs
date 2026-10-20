@@ -1,4 +1,4 @@
-using WebShoppie.Api.Contracts.Customer;
+ using WebShoppie.Api.Contracts.Customer;
 using WebShoppieAalst.Storage.DataModel;
 
 namespace WebShoppieAalst.Domain.Services.MappingExtensions;

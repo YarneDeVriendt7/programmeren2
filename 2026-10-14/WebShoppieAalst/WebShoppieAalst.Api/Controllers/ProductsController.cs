@@ -11,8 +11,7 @@ namespace WebShoppieAalst.Api.Controllers
     public class ProductsController(IProductService _productService) : ControllerBase
     {
         [HttpPost]
-        public ActionResult<ProductResponseContract> CreateProduct(
-            [FromBody] ProductRequestContract product)
+        public ActionResult<ProductResponseContract> CreateProduct([FromBody] ProductRequestContract product)
         {
             return Ok(_productService.CreateProduct(product));
         }
