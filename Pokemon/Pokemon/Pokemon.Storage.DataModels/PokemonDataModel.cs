@@ -1,9 +1,6 @@
 ﻿using PokemonApp.Domain.Models.Enums;
-using System;
-using System.Collections.Generic;
-using System.Text;
 
-namespace Pokemon.Storage.DataModels
+namespace PokemonApp.Storage.DataModels
 {
     public class PokemonDataModel
     {

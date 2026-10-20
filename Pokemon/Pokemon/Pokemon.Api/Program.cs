@@ -1,7 +1,7 @@
-using Pokemon.Domain.Services.Implementations;
-using Pokemon.Domain.Services.Interfaces.Repositories;
-using Pokemon.Domain.Services.Interfaces.Services;
-using Pokemon.Storage.Repos;
+using PokemonApp.Domain.Services.Implementations;
+using PokemonApp.Domain.Services.Interfaces.Repositories;
+using PokemonApp.Domain.Services.Interfaces.Services;
+using PokemonApp.Storage.Repos;
 
 var builder = WebApplication.CreateBuilder(args);
 

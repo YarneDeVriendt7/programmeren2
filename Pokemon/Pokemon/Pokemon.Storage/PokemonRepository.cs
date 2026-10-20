@@ -1,6 +1,5 @@
-﻿using Pokemon.Domain.Services.Interfaces.Repositories;
-using Pokemon.Storage.DataModels;
-using System.Collections.Generic;
+﻿using PokemonApp.Domain.Services.Interfaces.Repositories;
+using PokemonApp.Storage.DataModels;
 
 namespace PokemonApp.Storage.Repos
 {

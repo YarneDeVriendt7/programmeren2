@@ -1,7 +1,6 @@
-﻿using Pokemon.Storage.DataModels;
-using System.Collections.Generic;
+﻿using PokemonApp.Storage.DataModels;
 
-namespace Pokemon.Domain.Services.Interfaces.Repositories
+namespace PokemonApp.Domain.Services.Interfaces.Repositories
 {
     public interface IPokemonRepository
     {

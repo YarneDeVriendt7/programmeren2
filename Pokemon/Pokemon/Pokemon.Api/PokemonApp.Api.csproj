@@ -11,9 +11,9 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Pokemon.Api.Contracts\Pokemon.Api.Contracts.csproj" />
-    <ProjectReference Include="..\Pokemon.Domain.Services\Pokemon.Domain.Services.csproj" />
-    <ProjectReference Include="..\Pokemon.Storage\Pokemon.Storage.Repos.csproj" />
+    <ProjectReference Include="..\Pokemon.Api.Contracts\PokemonApp.Api.Contracts.csproj" />
+    <ProjectReference Include="..\Pokemon.Domain.Services\PokemonApp.Domain.Services.csproj" />
+    <ProjectReference Include="..\Pokemon.Storage\PokemonApp.Storage.Repos.csproj" />
   </ItemGroup>
 
 </Project>

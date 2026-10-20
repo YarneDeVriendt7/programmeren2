@@ -1,9 +1,5 @@
 ﻿using PokemonApp.Domain.Models.Enums;
-using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace Pokemon.Api.Contracts.Pokemon
+namespace PokemonApp.Api.Contracts.Pokemon
 {
     public class PokemonResponseContract
     {

@@ -1,9 +1,6 @@
 ﻿using PokemonApp.Domain.Models;
-using System;
-using System.Collections.Generic;
-using System.Text;
 
-namespace Pokemon.Domain.Services.Interfaces.Repositories
+namespace PokemonApp.Domain.Services.Interfaces.Repositories
 {
     public interface IVideogameRepository
     {

@@ -1,10 +1,7 @@
-﻿using Pokemon.Domain.Services.Interfaces.Repositories;
+﻿using PokemonApp.Domain.Services.Interfaces.Repositories;
 using PokemonApp.Domain.Models;
-using System;
-using System.Collections.Generic;
-using System.Text;
 
-namespace Pokemon.Storage.Repos
+namespace PokemonApp.Storage.Repos
 {
     public class VideogameRepository : IVideogameRepository
     {

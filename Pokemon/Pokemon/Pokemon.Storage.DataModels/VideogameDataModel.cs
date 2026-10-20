@@ -1,8 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
+﻿using System.Collections.Generic;
 
-namespace Pokemon.Storage.DataModels
+namespace PokemonApp.Storage.DataModels
 {
     public class VideogameDataModel
     {
