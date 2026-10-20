@@ -4,7 +4,7 @@ using System.Text;
 
 namespace Pokemon.Domain.Services.Interfaces.Services
 {
-    public class IPokemonService
+    public interface IPokemonService
     {
     }
 }
