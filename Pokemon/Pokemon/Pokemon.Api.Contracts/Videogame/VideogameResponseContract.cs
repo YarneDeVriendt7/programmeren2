@@ -6,8 +6,8 @@ namespace PokemonApp.Api.Contracts.Videogame
 {
     public class VideogameResponseContract
     {
-        public string Naam { get; set; }
-        public string Beschrijving { get; set; }
-        public DateTime DatumUitgave { get; set; }
+        public string Name { get; set; } = string.Empty;
+        public string Description { get; set; } = string.Empty;
+        public DateTime ReleaseDate { get; set; }
     }
 }
