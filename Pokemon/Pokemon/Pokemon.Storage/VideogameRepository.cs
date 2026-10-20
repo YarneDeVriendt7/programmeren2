@@ -1,26 +1,32 @@
 ﻿using PokemonApp.Domain.Services.Interfaces.Repositories;
 using PokemonApp.Domain.Models;
+using PokemonApp.Storage.DataModels;
 
 namespace PokemonApp.Storage.Repos
 {
     public class VideogameRepository : IVideogameRepository
     {
-        public void Add(Videogame videogame)
+        public void Add(VideogameDataModel videogame)
         {
             throw new NotImplementedException();
         }
 
-        public void Delete(Videogame videogame)
+        public VideogameDataModel Create(VideogameDataModel videogame)
         {
             throw new NotImplementedException();
         }
 
-        public List<Videogame> GetAll()
+        public void Delete(VideogameDataModel videogame)
         {
             throw new NotImplementedException();
         }
 
-        public Videogame? GetById(int id)
+        public List<VideogameDataModel> GetAll()
+        {
+            throw new NotImplementedException();
+        }
+
+        public VideogameDataModel? GetById(int id)
         {
             throw new NotImplementedException();
         }

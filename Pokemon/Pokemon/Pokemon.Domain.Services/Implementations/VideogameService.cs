@@ -1,7 +1,9 @@
-﻿using PokemonApp.Domain.Services.Interfaces.Repositories;
+﻿using PokemonApp.Api.Contracts.Videogame;
+using PokemonApp.Domain.Models;
+using PokemonApp.Domain.Services.Interfaces.Repositories;
 using PokemonApp.Domain.Services.Interfaces.Services;
-using PokemonApp.Api.Contracts.Videogame;
 using PokemonApp.Domain.Services.Mapping;
+using PokemonApp.Storage.DataModels;
 
 namespace PokemonApp.Domain.Services.Implementations
 {
@@ -9,14 +11,19 @@ namespace PokemonApp.Domain.Services.Implementations
     {
         public VideogameResponseContract CreateVideogame(VideogameRequestContract videogameRequest)
         {
-            var videogameResponse = new VideogameResponseContract
-            {
-                Name = videogameRequest.Name,
-            };
+            Videogame videogame = videogameRequest.AsDomainModel();
 
-            repository.Add(videogameRequest.AsDomainModel());
+            bool exists = repository.GetAll()
+                .Any(v => v.Name.Equals(
+                    videogame.Name,
+                    StringComparison.OrdinalIgnoreCase));
 
-            return videogameResponse;
+            if (exists)           
+                throw new ArgumentException("Videogame with this name already exists.");
+            
+            VideogameDataModel createdVideogame = repository.Create(videogame.AsDataModel());
+
+            return createdVideogame.AsDomainModel().AsContract();
         }
     }
 }

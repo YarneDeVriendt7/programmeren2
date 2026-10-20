@@ -1,12 +1,14 @@
 ﻿using PokemonApp.Domain.Models;
+using PokemonApp.Storage.DataModels;
 
 namespace PokemonApp.Domain.Services.Interfaces.Repositories
 {
     public interface IVideogameRepository
     {
-        List<Videogame> GetAll();
-        Videogame? GetById(int id);
-        void Add(Videogame videogame);
-        void Delete(Videogame videogame);
+        VideogameDataModel Create(VideogameDataModel videogame);
+        List<VideogameDataModel> GetAll();
+        VideogameDataModel? GetById(int id);
+        void Add(VideogameDataModel videogame);
+        void Delete(VideogameDataModel videogame);
     }
 }
