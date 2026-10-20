@@ -6,4 +6,8 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\Pokemon.Domain.Services\Pokemon.Domain.Services.csproj" />
+  </ItemGroup>
+
 </Project>

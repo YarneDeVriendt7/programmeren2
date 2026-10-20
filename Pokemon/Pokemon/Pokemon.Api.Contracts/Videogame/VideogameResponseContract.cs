@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace Pokemon.Api.Contracts.Videogame
+namespace PokemonApp.Api.Contracts.Videogame
 {
     public class VideogameResponseContract
     {

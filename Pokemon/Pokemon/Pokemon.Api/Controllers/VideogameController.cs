@@ -1,6 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 
-namespace Pokemon.Api.Controllers
+namespace PokemonApp.Api.Controllers
 {
     [ApiController]
     [Route("[controller]")]
