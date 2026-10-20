@@ -1,3 +1,11 @@
 <Solution>
-  <Project Path="Pokemon.Api/Pokemon.Api.csproj" />
+  <Folder Name="/Api/">
+    <Project Path="Pokemon.Api/Pokemon.Api.csproj" />
+  </Folder>
+  <Folder Name="/Domain/">
+    <Project Path="Pokemon.Domain/Pokemon.Domain.csproj" />
+  </Folder>
+  <Folder Name="/Storage/">
+    <Project Path="Pokemon.Storage/Pokemon.Storage.csproj" />
+  </Folder>
 </Solution>
