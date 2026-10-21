@@ -1,0 +1,14 @@
+<Solution>
+  <Folder Name="/Api/">
+    <Project Path="Pokemon.Api.Contracts/PokemonApp.Api.Contracts.csproj" />
+    <Project Path="Pokemon.Api/PokemonApp.Api.csproj" />
+  </Folder>
+  <Folder Name="/Domain/">
+    <Project Path="Pokemon.Domain.Services/PokemonApp.Domain.Services.csproj" />
+    <Project Path="Pokemon.Domain/PokemonApp.Domain.Models.csproj" />
+  </Folder>
+  <Folder Name="/Storage/">
+    <Project Path="Pokemon.Storage.DataModels/PokemonApp.Storage.DataModels.csproj" />
+    <Project Path="Pokemon.Storage/PokemonApp.Storage.Repos.csproj" />
+  </Folder>
+</Solution>
