@@ -35,10 +35,5 @@ namespace PokemonApp.Storage.Repos
         {
             return _videogames.Remove(id);
         }
-
-        public VideogameDataModel Update(VideogameDataModel videogame)
-        {
-            throw new NotImplementedException();
-        }
     }
 }

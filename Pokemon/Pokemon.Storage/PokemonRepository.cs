@@ -1,33 +1,48 @@
-﻿using PokemonApp.Domain.Services.Interfaces.Repositories;
+﻿using PokemonApp.Domain.Models;
+using PokemonApp.Domain.Models.Enums;
+using PokemonApp.Domain.Services.Interfaces.Repositories;
 using PokemonApp.Storage.DataModels;
 
 namespace PokemonApp.Storage.Repos
 {
     public class PokemonRepository : IPokemonRepository
     {
-        public void Add(PokemonDataModel pokemon)
-        {
-            throw new NotImplementedException();
-        }
+        private readonly Dictionary<int, PokemonDataModel> _pokemons = new();
 
-        public void Delete(int id)
+        public PokemonDataModel Create(PokemonDataModel pokemon)
         {
-            throw new NotImplementedException();
-        }
+            var id = 1;
 
-        public List<PokemonDataModel> GetAll()
-        {
-            throw new NotImplementedException();
+            if (_pokemons.Keys.Count > 0)
+                id = _pokemons.Keys.Max() + 1;
+
+            pokemon.Id = id;
+            _pokemons[id] = pokemon;
+
+            return _pokemons[id];
         }
 
         public PokemonDataModel? GetById(int id)
         {
-            throw new NotImplementedException();
+            return _pokemons.GetValueOrDefault(id);
         }
 
-        public void Update(PokemonDataModel pokemon)
+        public List<PokemonDataModel> GetAll()
         {
-            throw new NotImplementedException();
+            return _pokemons.Values.ToList();
+        }
+
+        public List<PokemonDataModel> GetByType(PokemonType type)
+        {
+            return _pokemons
+                .Where(p => p.Value.PokemonType == type)
+                .Select(p => p.Value)
+                .ToList();
+        }
+
+        public bool DeleteById(int id)
+        {
+            return _pokemons.Remove(id);
         }
     }
 }

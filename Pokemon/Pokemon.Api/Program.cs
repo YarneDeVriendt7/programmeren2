@@ -6,17 +6,21 @@ using System.Text.Json.Serialization;
 
 var builder = WebApplication.CreateBuilder(args);
 
-builder.Services.AddControllers();
+builder.Services.AddControllers()
+    .AddJsonOptions(opt =>
+        {
+            opt.JsonSerializerOptions.Converters.Add(
+                new JsonStringEnumConverter());
+        });
+
 builder.Services.AddScoped<IVideogameService, VideogameService>();
 builder.Services.AddSingleton<IVideogameRepository, VideogameRepository>();
+builder.Services.AddScoped<IPokemonService, PokemonService>();
+builder.Services.AddSingleton<IPokemonRepository, PokemonRepository>();
+
 builder.Services.AddOpenApi();
 
 var app = builder.Build();
-
-//builder.Services.AddControllers().AddJsonOptions(opt => {
-//    opt.JsonSerializerOptions.Converters.Add(
-//        new JsonStringEnumConverter());
-//});
 
 if (app.Environment.IsDevelopment())
     app.MapOpenApi();

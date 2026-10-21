@@ -7,7 +7,7 @@ namespace PokemonApp.Api.Contracts.Pokemon
     {
         [MaxLength(30)]
         public string Name { get; set; } = string.Empty;
-        public PokemonType Type { get; set; }
+        public PokemonType PokemonType { get; set; }
         public Rarity Rarity { get; set; }
     }
 }

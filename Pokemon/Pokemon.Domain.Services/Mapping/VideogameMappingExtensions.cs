@@ -43,7 +43,6 @@ namespace PokemonApp.Domain.Services.Mapping
             };
         }
 
-
         public static VideogameResponseContract AsContract(this Videogame videogame)
         {
             return new VideogameResponseContract
@@ -54,7 +53,7 @@ namespace PokemonApp.Domain.Services.Mapping
                     {
                         Id = p.Id,
                         Name = p.Name,
-                        Type = p.Type,
+                        PokemonType = p.PokemonType,
                         Rarity = p.Rarity
                     })
                     .ToList()
