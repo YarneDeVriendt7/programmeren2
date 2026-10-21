@@ -13,18 +13,15 @@ builder.Services.AddOpenApi();
 
 var app = builder.Build();
 
-builder.Services.AddControllers().AddJsonOptions(opt => {
-    opt.JsonSerializerOptions.Converters.Add(
-        new JsonStringEnumConverter());
-});
+//builder.Services.AddControllers().AddJsonOptions(opt => {
+//    opt.JsonSerializerOptions.Converters.Add(
+//        new JsonStringEnumConverter());
+//});
 
 if (app.Environment.IsDevelopment())
     app.MapOpenApi();
 
 app.UseHttpsRedirection();
-
 app.UseAuthorization();
-
 app.MapControllers();
-
 app.Run();

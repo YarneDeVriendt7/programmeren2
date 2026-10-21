@@ -8,7 +8,7 @@ namespace PokemonApp.Domain.Services.Interfaces.Repositories
         VideogameDataModel Create(VideogameDataModel videogame);
         List<VideogameDataModel> GetAll();
         VideogameDataModel? GetById(int id);
-        void Add(VideogameDataModel videogame);
-        void Delete(VideogameDataModel videogame);
+        VideogameDataModel Update(VideogameDataModel videogame);
+        bool DeleteById(int id);
     }
 }

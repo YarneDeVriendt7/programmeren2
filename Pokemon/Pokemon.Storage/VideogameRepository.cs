@@ -6,27 +6,37 @@ namespace PokemonApp.Storage.Repos
 {
     public class VideogameRepository : IVideogameRepository
     {
-        public void Add(VideogameDataModel videogame)
-        {
-            throw new NotImplementedException();
-        }
+        private readonly Dictionary<int, VideogameDataModel> _videogames = new();
 
         public VideogameDataModel Create(VideogameDataModel videogame)
         {
-            throw new NotImplementedException();
+            var id = 1;      
+
+            if(_videogames.Keys.Count > 0) 
+                id = _videogames.Keys.Max() + 1;
+
+            videogame.Id = id;
+            _videogames[id] = videogame;
+
+            return _videogames[id];
         }
 
-        public void Delete(VideogameDataModel videogame)
+        public VideogameDataModel? GetById(int id)
         {
-            throw new NotImplementedException();
+            return _videogames.GetValueOrDefault(id);
         }
 
         public List<VideogameDataModel> GetAll()
         {
-            throw new NotImplementedException();
+            return _videogames.Values.ToList();
         }
 
-        public VideogameDataModel? GetById(int id)
+        public bool DeleteById(int id)
+        {
+            return _videogames.Remove(id);
+        }
+
+        public VideogameDataModel Update(VideogameDataModel videogame)
         {
             throw new NotImplementedException();
         }

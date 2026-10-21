@@ -4,6 +4,9 @@ namespace PokemonApp.Domain.Services.Interfaces.Services
 {
     public interface IVideogameService
     {
-        VideogameResponseContract CreateVideogame(VideogameRequestContract videogameRequest);
+        VideogameResponseContract Create(VideogameRequestContract videogameRequest);
+        VideogameResponseContract GetById(int id);
+        List<VideogameResponseContract> GetAll();
+        bool Delete(int id);
     }
 }
