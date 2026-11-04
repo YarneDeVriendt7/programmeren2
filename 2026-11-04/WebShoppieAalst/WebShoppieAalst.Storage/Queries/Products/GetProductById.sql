@@ -1,0 +1,1 @@
+SELECT * FROM storefront.products WHERE ProductId = @id
