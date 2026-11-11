@@ -1,0 +1,333 @@
+{
+  "info": {
+    "_postman_id": "a6c3d1c5-e87c-489f-8cf8-ad45912e26e1",
+    "name": "2026-2027-s1-pg2-aalst",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "33190066"
+  },
+  "item": [
+    {
+      "name": "Customers",
+      "item": [
+        {
+          "name": "Create Customer",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"Email\" : \"bla-aalst-post-foefel@blu.be\",\n    \"Country\" : \"BE\",\n    \"LastName\" : \"Aalst 3\",\n    \"FirstName\" : \"Jefke\",\n    \"Addressline1\" : \"Dorpstraat 1\",\n    \"Addressline2\" : \"9300 Aalst\",\n    \"DateOfBirth\" : \"2000-07-14\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:5016/customers",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "5016",
+              "path": [
+                "customers"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Update Customer",
+          "request": {
+            "method": "PUT",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"Email\" : \"bla-updated@blu.be\",\n    \"Country\" : \"BE\",\n    \"LastName\" : \"Permentier\",\n    \"FirstName\" : \"Jefke Updated\",\n    \"Addressline1\" : \"Dorpstraat 1\",\n    \"Addressline2\" : \"9300 Aalst\",\n    \"DateOfBirth\" : \"2000-07-14\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:5016/customers/1",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "5016",
+              "path": [
+                "customers",
+                "1"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Create Customer Marieke",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"Email\" : \"bla@blu.be\",\n    \"Country\" : \"BE\",\n    \"LastName\" : \"Permentier\",\n    \"FirstName\" : \"Marieke\",\n    \"Addressline1\" : \"Dorpstraat 1\",\n    \"Addressline2\" : \"9300 Aalst\",\n    \"DateOfBirth\" : \"2000-07-14\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:5016/customers",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "5016",
+              "path": [
+                "customers"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Get Customer",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:5016/customers/14",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "5016",
+              "path": [
+                "customers",
+                "14"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Delete Customer",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:5016/customers/2",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "5016",
+              "path": [
+                "customers",
+                "2"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Get Customers",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:5016/customers",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "5016",
+              "path": [
+                "customers"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "Prularia",
+      "item": [
+        {
+          "name": "Hello World Test",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:5270",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "5270"
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Weather",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:5016/weatherforecast",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "5016",
+              "path": [
+                "weatherforecast"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "Products",
+      "item": [
+        {
+          "name": "Get Products",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:5016/products",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "5016",
+              "path": [
+                "products"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Get Product",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:5016/products/3",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "5016",
+              "path": [
+                "products",
+                "3"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Update Product",
+          "request": {
+            "method": "PUT",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"title\": \"Wireless Mouse v2\",\n    \"description\": \"Ergonomic wireless mouse with adjustable DPI\",\n    \"price\": 39.99,\n    \"stockCount\": 40\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:5016/products/1",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "5016",
+              "path": [
+                "products",
+                "1"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Create Product",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"title\": \"Wireless RGB LED v2\",\n    \"description\": \"Ergonomic wireless RGB LED\",\n    \"price\": 19.99,\n    \"stockCount\": 1000\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:5016/products",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "5016",
+              "path": [
+                "products"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "Orders",
+      "item": [
+        {
+          "name": "Create Order",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"CustomerId\" : 6,\n        \"OrderProducts\" : [\n                    {\n            \"ProductId\" : 1,\n            \"Quantity\" : 7\n        },\n        {\n            \"ProductId\" : 2,\n            \"Quantity\" : 9\n        }\n    ]\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:5016/orders",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "5016",
+              "path": [
+                "orders"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    }
+  ]
+}
